@@ -1,0 +1,86 @@
+/* General Styles */
+body {
+    background-color: #ffe4e1;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    background-color: #fff3f0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Button Styling */
+.btn {
+    margin-top: 15px;
+    padding: 12px 24px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #ff4081;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff79b0;
+    transform: scale(1.1);
+}
+
+/* Flying Hearts */
+.heart {
+    position: absolute;
+    color: #ff4081;
+    font-size: 24px;
+    animation: fly 3s linear forwards;
+}
+
+@keyframes fly {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+}
+
+/* Floating Balloons */
+.balloon {
+    position: absolute;
+    bottom: -50px;
+    width: 30px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    animation: floatUp 5s linear forwards;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh) scale(1); opacity: 1; }
+    100% { transform: translateY(-100vh) scale(1.2); opacity: 0; }
+}
+
+/* Birthday Ribbon */
+.ribbon {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff4081, #ff79b0);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
